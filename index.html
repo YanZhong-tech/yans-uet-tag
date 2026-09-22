@@ -103,6 +103,17 @@
 
   </script>  
 
+<script>
+
+  function GetCustomEvent() { 
+
+   window.uetq = window.uetq || [];
+   window.uetq.push('event', 'purchase', {'revenue_value': GetRevenueValue(), 'currency': 'USD'});
+
+ }
+
+</script>
+  
   <script>
     function GetCustomEvent() {
       const purchaseEvent = new CustomEvent("Purchase", {
