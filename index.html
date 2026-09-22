@@ -1,8 +1,9 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <script>
 
+  <!-- UET tag -->
+  <script>
    (function(w, d, t, u, o) {
         w[u] = w[u] || [], o.ts = (new Date).getTime();
         var n = d.createElement(t);
@@ -102,6 +103,18 @@
     }
 
   </script>  
+
+  <script>
+<!-- GetCustomEvent)方法调用 -->
+  function GetCustomEvent() { 
+
+   window.uetq = window.uetq || [];
+   window.uetq.push('event', 'purchase', {'revenue_value': GetRevenueValue(), 'currency': 'USD'});
+
+ }
+
+</script>
+
 
 </body>
 </html>
