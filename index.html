@@ -118,10 +118,7 @@
     function GetCustomEvent() {
       const purchaseEvent = new CustomEvent("Purchase", {
         detail: { source: "Yan's UET Tag" }
-      });
-
-      window.dispatchEvent(purchaseEvent);
-      document.getElementById("status").textContent = "Purchase event triggered.";
+      }
     }
   </script>
 </body>
