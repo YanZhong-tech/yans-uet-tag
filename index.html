@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yan's UET Tag</title>
+  <style>
+    :root {
+      color-scheme: light;
+      font-family: Georgia, "Times New Roman", serif;
+      background: #f7f7f7;
+      color: #222;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      margin: 0;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      background: #f7f7f7;
+    }
+
+    main {
+      width: min(520px, 100%);
+      padding: clamp(32px, 7vw, 56px);
+      background: #fff;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0 0 32px;
+      font-size: clamp(2rem, 8vw, 3.5rem);
+      line-height: 1.1;
+      letter-spacing: 0;
+    }
+
+    button {
+      min-width: 150px;
+      min-height: 48px;
+      border: 1px solid #222;
+      border-radius: 4px;
+      background: #222;
+      color: #fff;
+      cursor: pointer;
+      font: 700 1rem/1 "Trebuchet MS", sans-serif;
+      letter-spacing: 0;
+      transition: background 160ms ease;
+    }
+
+    button:hover {
+      background: #444;
+    }
+
+    button:focus-visible {
+      outline: 3px solid #999;
+      outline-offset: 4px;
+    }
+
+    #status {
+      min-height: 1.25rem;
+      margin: 22px 0 0;
+      color: #555;
+      font: 600 0.875rem/1.4 "Trebuchet MS", sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Yan's UET Tag</h1>
+    <button type="button" onclick="GetCustomEvent()">Purchase</button>
+    <p id="status" role="status" aria-live="polite"></p>
+  </main>
+
+  <script>
+    function GetCustomEvent() {
+      const purchaseEvent = new CustomEvent("Purchase", {
+        detail: { source: "Yan's UET Tag" }
+      });
+
+      window.dispatchEvent(purchaseEvent);
+      document.getElementById("status").textContent = "Purchase event triggered.";
+    }
+  </script>
+</body>
+</html>
